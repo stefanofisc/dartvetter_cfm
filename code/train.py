@@ -25,25 +25,6 @@ def get_input_variables():
     return local_path, input_catalog, output_dir, model_name, n_t, k, n_batch, train_model_on_global_views
 
 
-""" #NOTE. Old method setting input variables without a yaml configuration file. To be removed.
-def get_input_variables():
-    # Set the working directory path
-    local_path = '/home/s.fiscale/conda/Models/forest_diffusion/'
-    # Training set name: could be a set of features vectors or global views
-    train_set_name = 'kepler_q1-q17_dr25_split100_features_' #kepler_q1-q17_dr25_split100
-    input_catalog = 'data/'+train_set_name+'.csv'
-
-    train_model_on_global_views = False
-    # Hyperparameters
-    n_t = 25
-    k = 10
-    n_batch = 70
-    # Name of the directory in which to save the model
-    output_dir = local_path + 'trained_models/'
-    model_name = 'forest_'+train_set_name+'_features_nt'+str(n_t)+'_k'+str(k)+'_nb'+str(n_batch)+'.pkl'
-
-    return local_path, input_catalog, output_dir, model_name, n_t, k, n_batch, train_model_on_global_views
-"""
 
 def get_samples_labels(path):
     values = np.genfromtxt(path, delimiter=',')
