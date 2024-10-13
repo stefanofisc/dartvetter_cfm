@@ -141,7 +141,7 @@ if __name__ == '__main__':
     batch_size = 128     # Dimensione del batch
     num_epochs = 10     # Numero di epoche
     # Path di training e test set
-    local_path = '/home/s.fiscale/conda/Models/forest_diffusion/'
+    local_path = '/path/to/dartvetter_cfm/'
     training_set_path = local_path + 'data/kepler_q1-q17_dr24_split90.csv'
     test_set_path = local_path + 'data/tess_exofop_spoc-qlp_split100.csv'
 
