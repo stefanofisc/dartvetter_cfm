@@ -21,14 +21,16 @@ pip list
 ```
 This will display all the libraries installed in your environment.
 
-# Files
+
+# Directory Structure
+## Files
 - train.py: This script contains methods for training the Forest Diffusion model. It loads data from the data/directory, processes it, and trains the model using the specified hyperparameters. After training, the trained model is saved in the trained_models/ directory.
 - test.py: Contains methods for evaluating the model's performance. It loads a trained model from trained_models/ and runs tests on the test dataset.
 - plot.py: Used to generate visualizations of the model's performance, including accuracy, loss curves, and confusion matrices.
 train.slurm & test.slurm: SLURM batch files for running the training and testing processes on a cluster environment. These scripts are designed for distributed training on high-performance compute nodes.
 
-# Directory Structure
-- data/
+
+- `data/`
   
 This directory contains input data used for training and testing the model. Input data can be in .csv or .npy format.
   - CSV Format: Each CSV file is a table of size NxM, where:
@@ -38,37 +40,38 @@ Naming Convention: <mission>_<catalog_name>_<dataset_size>. Example: kepler_q1-q
 
   - .npy Format: .npy files store K-dimensional vectors that contain the features extracted by the CNN for each global view. This is used for faster loading during training.
 
-- output_files/
+- `output_files/`
   
 Stores the outputs generated during training and testing. This includes logs, evaluation metrics, and intermediate results.
 
-- trained_models/
+- `trained_models/`
   
 After training, models are saved in this directory. The naming convention is:
 <model_type>_<mission>_<catalog_name>_<dataset_size>.pth
 
-- utils/
+- `utils/`
   
 Contains utility scripts.
--- convert_tfrecord_to_numpy.py: Converts input data from .tfrecord format to NumPy arrays. This step is necessary to process the data with the ForestDiffusion model.
+-- `convert_tfrecord_to_numpy.py`: Converts input data from .tfrecord format to NumPy arrays. This step is necessary to process the data with the ForestDiffusion model.
 
-- feature_extraction/
+- `feature_extraction/`
   
 This directory contains the methods used to extract features from the input data using a CNN model.
--- m1.py: Defines the architecture of the CNN used for feature extraction.
--- train_test_cnn.py: Contains methods for training and testing the CNN. After training, the extracted features are saved as .npy files, which are later used by the Forest Diffusion model.
+-- `m1.py`: Defines the architecture of the CNN used for feature extraction.
+-- `train_test_cnn.py`: Contains methods for training and testing the CNN. After training, the extracted features are saved as .npy files, which are later used by the Forest Diffusion model.
 
 
 # How to Use
 
-Train the model: To train the Forest Diffusion model, run:
+To train the Forest Diffusion model, run:
 
-python train.py --config config.yaml
+```bash
+python train.py --config train_config.yaml
+```
 
-Or you can edit the train.slurm file in order your code to be run on a remote environment
+To test a trained model, run:
+```bash
+python test.py --config test_config.yaml
+```
 
-Make sure your data is correctly placed in the 'data/' directory and the configuration file contains the right parameters.
-
-Test the model: To test a trained model, run:
-
-python test.py 
+Or you can edit the `train(test).slurm` files in order your code to be run on a remote environment. Make sure your data is correctly placed in the `data/` directory and the configuration file contains the right parameters.
