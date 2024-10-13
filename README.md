@@ -5,7 +5,8 @@ Code and resources for training the Forest Diffusion model to classify potential
 This repository contains the code and resources necessary to train and test the Forest Diffusion Model, a machine learning model designed to distinguish planetary signals from false positives. The model is compatible with signals from the Kepler and TESS missions, but can also work with data from any transiting survey. It utilizes global view data and features extracted from a Convolutional Neural Network (CNN) for this classification task.
 
 # Setup and Dependencies
-### 2. Create a New Conda Environment
+Create a new conda environment and set all the requested libraries to correctly run the code
+
 ```bash
 conda create --name environment_name python=3.10
 conda activate environment_name
