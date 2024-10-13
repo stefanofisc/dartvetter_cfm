@@ -1,10 +1,10 @@
 # dartvetter_cfm
 Code and resources for training the Forest Diffusion model to classify potential planetary signals
 
-# Project Overview
+## Project Overview
 This repository contains the code and resources necessary to train and test the Forest Diffusion Model, a machine learning model designed to distinguish planetary signals from false positives. The model is compatible with signals from the Kepler and TESS missions, but can also work with data from any transiting survey. It utilizes global view data and features extracted from a Convolutional Neural Network (CNN) for this classification task.
 
-# Setup and Dependencies
+## Setup and Dependencies
 Create a new conda environment and set all the requested libraries to correctly run the code
 
 ```bash
@@ -22,14 +22,14 @@ pip list
 This will display all the libraries installed in your environment.
 
 
-# Directory Structure
-## Files
-- train.py: This script contains methods for training the Forest Diffusion model. It loads data from the data/directory, processes it, and trains the model using the specified hyperparameters. After training, the trained model is saved in the trained_models/ directory.
-- test.py: Contains methods for evaluating the model's performance. It loads a trained model from trained_models/ and runs tests on the test dataset.
-- plot.py: Used to generate visualizations of the model's performance, including accuracy, loss curves, and confusion matrices.
+## Directory Structure
+### Files
+- `train.py`: This script contains methods for training the Forest Diffusion model. It loads data from the data/directory, processes it, and trains the model using the specified hyperparameters. After training, the trained model is saved in the trained_models/ directory.
+- `test.py`: Contains methods for evaluating the model's performance. It loads a trained model from trained_models/ and runs tests on the test dataset.
+- `plot.py`: Used to generate visualizations of the model's performance, including accuracy, loss curves, and confusion matrices.
 train.slurm & test.slurm: SLURM batch files for running the training and testing processes on a cluster environment. These scripts are designed for distributed training on high-performance compute nodes.
 
-
+### Directories
 - `data/`
   
 This directory contains input data used for training and testing the model. Input data can be in .csv or .npy format.
@@ -61,7 +61,7 @@ This directory contains the methods used to extract features from the input data
 -- `train_test_cnn.py`: Contains methods for training and testing the CNN. After training, the extracted features are saved as .npy files, which are later used by the Forest Diffusion model.
 
 
-# How to Use
+## Usage example
 
 To train the Forest Diffusion model, run:
 
