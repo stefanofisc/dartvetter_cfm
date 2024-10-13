@@ -1,7 +1,7 @@
 # Configuration file for testing the Forest Diffusion Model
 
 # General settings
-local_path: "/home/s.fiscale/conda/Models/forest_diffusion/"
+local_path: "/path/to/dartvetter_cfm/"
 inpath: "trained_models/"
 
 # Training and test split ratios
@@ -13,4 +13,4 @@ model_name: "forest_kepler_q1-q17_dr24_split90_nt25_k10_nb70.pkl"  # Name of the
 test_set_name: "tess_exofop_spoc-qlp_split100"  # Name of the test dataset (without extension)
 
 # Paths derived from input variables
-test_catalog: "/home/s.fiscale/conda/Models/forest_diffusion/data/tess_exofop_spoc-qlp_split100.csv"
+test_catalog: "/path/to/dartvetter_cfm/data/tess_exofop_spoc-qlp_split100.csv"
