@@ -9,7 +9,7 @@ def get_input_variables():
     accuracy = [0.8081894516944885, 0.802532970905304, 0.7957128286361694, 0.8096957206726074]
     labels = ['split 50-50', 'split 60-40', 'split 80-20', 'split 90-10']
 
-    output_path = '/home/s.fiscale/conda/Models/forest_diffusion/output_files/plot/'
+    output_path = '/path/to/dartvetter_cfm/output_files/plot/'
     output_file = output_path + 'train_test_kepler_dr24.png'
 
     return precision, recall, accuracy, labels, output_file
@@ -73,7 +73,7 @@ def main_confmat():
         [ fn, tp]])
     # Labels for the heatmap
     label_matrix = np.array([[f'TN\n{tn}', f'FP\n{fp}'],[f'FN\n{fn}', f'TP\n{tp}']])
-    output_path = '/home/s.fiscale/conda/Models/forest_diffusion/output_files/plot/'
+    output_path = '/path/to/dartvetter_cfm/output_files/plot/'
     output_file = output_path + 'confmat_kepler_dr25_train'+train_split+'_test'+test_split+'.png'
     plot_confmat(confusion_matrix, label_matrix, split, output_file)
 
