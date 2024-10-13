@@ -24,19 +24,6 @@ def get_input_variables():
     return model_name, test_catalog
 
 
-""" NOTE. Old method to set the input variables
-def get_input_variables():
-    local_path = '/home/s.fiscale/conda/Models/forest_diffusion/'
-    inpath = 'trained_models/'
-    train_split = '90'
-    test_split = '100'
-    model_name = local_path + inpath + 'forest_kepler_q1-q17_dr24_split'+train_split+'_nt25_k10_nb70.pkl'
-    test_set_name = 'tess_exofop_spoc-qlp_split'+test_split
-    test_catalog = local_path + 'data/' + test_set_name + '.csv'
-
-    return model_name, test_catalog
-"""
-
 def print_metrics(samples, labels, forest_model):
     labels = labels.astype(int)
 
