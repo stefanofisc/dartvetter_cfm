@@ -1,13 +1,13 @@
 # Configuration file for training the Forest Diffusion Model
 
 # General settings
-local_path: "/home/s.fiscale/conda/Models/forest_diffusion/"
+local_path: "/path/to/dartvetter_cfm/"
 train_set_name: "kepler_q1-q17_dr25_split100_features_"  # Name of the dataset (features or global views)
 train_model_on_global_views: False  # Whether to train on global views or extracted features
 
 # Input and output
 input_catalog: "data/kepler_q1-q17_dr25_split100_features_.csv"  # Path to input catalog
-output_dir: "/home/s.fiscale/conda/Models/forest_diffusion/trained_models/"  # Directory to save the trained model
+output_dir: "/path/to/dartvetter_cfm/trained_models/"  # Directory to save the trained model
 model_name: "forest_kepler_q1-q17_dr25_split100_features_nt25_k10_nb70.pkl"  # Model filename
 
 # Model hyperparameters
