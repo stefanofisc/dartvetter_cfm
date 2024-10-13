@@ -27,7 +27,8 @@ This will display all the libraries installed in your environment.
 - `train.py`: This script contains methods for training the Forest Diffusion model. It loads data from the data/directory, processes it, and trains the model using the specified hyperparameters. After training, the trained model is saved in the trained_models/ directory.
 - `test.py`: Contains methods for evaluating the model's performance. It loads a trained model from trained_models/ and runs tests on the test dataset.
 - `plot.py`: Used to generate visualizations of the model's performance, including accuracy, loss curves, and confusion matrices.
-train.slurm & test.slurm: SLURM batch files for running the training and testing processes on a cluster environment. These scripts are designed for distributed training on high-performance compute nodes.
+- `*.yaml`: Files for setting the input variables of `train.py` and `test.py`.
+- `train.slurm` & `test.slurm`: SLURM batch files for running the training and testing processes on a cluster environment. These scripts are designed for distributed training on high-performance compute nodes.
 
 ### Directories
 - `data/`
