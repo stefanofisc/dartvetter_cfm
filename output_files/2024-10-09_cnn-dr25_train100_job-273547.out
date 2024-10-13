@@ -1,0 +1,19 @@
+/home/s.fiscale/anaconda3/envs/torchcfm/lib/python3.10/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11040). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Epoch 0/9, Loss: 0.3986, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3986
+Epoch 1/9, Loss: 0.3575, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3575
+Epoch 2/9, Loss: 0.3493, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3493
+Epoch 3/9, Loss: 0.3419, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3419
+Epoch 4/9, Loss: 0.3376, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3376
+Epoch 5/9, Loss: 0.3302, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3302
+Epoch 6/9, Loss: 0.3304, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3304
+Epoch 7/9, Loss: 0.3254, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3254
+Epoch 8/9, Loss: 0.3210, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3210
+Epoch 9/9, Loss: 0.3205, Precision: 0.2499, Recall: 1.0000, F1 Score: 0.3999, Loss: 0.3205
+Modello salvato in: /home/s.fiscale/conda/Models/forest_diffusion/trained_models/cnn_kepler_q1-q17_dr25_split100.pt
+Caratteristiche estratte salvate in 'extracted_features.npy'
+Label associati salvati in 'extracted_labels.npy'
+Traceback (most recent call last):
+  File "/home/s.fiscale/conda/Models/forest_diffusion/code/feature_extraction/train_cnn.py", line 168, in <module>
+    evaluate_model(trained_model, test_loader)
+TypeError: evaluate_model() missing 1 required positional argument: 'criterion'

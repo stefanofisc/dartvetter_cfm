@@ -1,0 +1,12 @@
+/home/s.fiscale/anaconda3/envs/torchcfm/lib/python3.10/site-packages/xgboost/core.py:265: FutureWarning: Your system has an old version of glibc (< 2.28). We will stop supporting Linux distros with glibc older than 2.28 after **May 31, 2025**. Please upgrade to a recent Linux distro (with glibc 2.28+) to use future versions of XGBoost.
+Note: You have installed the 'manylinux2014' variant of XGBoost. Certain features such as GPU algorithms or federated learning are not available. To use these features, please upgrade to a recent Linux distro with glibc 2.28+, and install the 'manylinux_2_28' variant.
+  warnings.warn(
+Loading model
+Testing on /home/s.fiscale/conda/Models/forest_diffusion/data/kepler_q1-q17_dr25_split10.csv
+
+Accuracy:  0.545316755771637
+Precision:  0.2628611624240875
+Recall:  0.4510278105735779
+Confusion matrix:
+ tensor([[1426, 1046],
+        [ 454,  373]])

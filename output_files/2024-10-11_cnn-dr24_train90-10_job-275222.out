@@ -1,0 +1,50 @@
+/home/s.fiscale/anaconda3/envs/torchcfm/lib/python3.10/site-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 11040). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+/home/s.fiscale/conda/Models/forest_diffusion/code/feature_extraction/train_cnn.py:180: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  pos_weight = torch.tensor(num_neg / num_pos).to(device)  # Calcolo del pos_weight
+eseguo training su cpu
+DartVetterFiscale2024(
+  (global_view): GlobalViewFiscale(
+    (convs): ModuleList(
+      (0): Conv1d(1, 16, kernel_size=(3,), stride=(1,), padding=same)
+      (1): Conv1d(16, 32, kernel_size=(3,), stride=(1,), padding=same)
+      (2): Conv1d(32, 64, kernel_size=(3,), stride=(1,), padding=same)
+      (3): Conv1d(64, 128, kernel_size=(3,), stride=(1,), padding=same)
+      (4): Conv1d(128, 256, kernel_size=(3,), stride=(1,), padding=same)
+    )
+    (dropout): ModuleList(
+      (0-4): 5 x Dropout(p=0.3, inplace=False)
+    )
+    (batch_norms): ModuleList(
+      (0): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (3): BatchNorm1d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (4): BatchNorm1d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (flatten): Flatten(start_dim=1, end_dim=-1)
+  )
+  (fully_connected): FullyConnectedFiscale(
+    (fc_layer): Linear(in_features=768, out_features=512, bias=True)
+    (dropout): Dropout(p=0.3, inplace=False)
+    (output_layer): Linear(in_features=512, out_features=1, bias=True)
+  )
+)
+Epoch 0/9, Loss: 0.4654, Precision: 0.7298, Recall: 0.8883, F1 Score: 0.8013, Loss: 0.4654
+Epoch 1/9, Loss: 0.3919, Precision: 0.7877, Recall: 0.8938, F1 Score: 0.8374, Loss: 0.3919
+Epoch 2/9, Loss: 0.3674, Precision: 0.7984, Recall: 0.8985, F1 Score: 0.8455, Loss: 0.3674
+Epoch 3/9, Loss: 0.3514, Precision: 0.8072, Recall: 0.9090, F1 Score: 0.8550, Loss: 0.3514
+Epoch 4/9, Loss: 0.3398, Precision: 0.8258, Recall: 0.9049, F1 Score: 0.8636, Loss: 0.3398
+Epoch 5/9, Loss: 0.3319, Precision: 0.8209, Recall: 0.9130, F1 Score: 0.8645, Loss: 0.3319
+Epoch 6/9, Loss: 0.3268, Precision: 0.8254, Recall: 0.9077, F1 Score: 0.8646, Loss: 0.3268
+Epoch 7/9, Loss: 0.3202, Precision: 0.8308, Recall: 0.9093, F1 Score: 0.8683, Loss: 0.3202
+Epoch 8/9, Loss: 0.3192, Precision: 0.8292, Recall: 0.9127, F1 Score: 0.8689, Loss: 0.3192
+Epoch 9/9, Loss: 0.3136, Precision: 0.8318, Recall: 0.9157, F1 Score: 0.8717, Loss: 0.3136
+Modello salvato in: /home/s.fiscale/conda/Models/forest_diffusion/trained_models/cnn_kepler_q1-q17_dr24_split100.pt
+Test Loss: 0.4680
+Precision: 0.7750
+Recall: 0.8278
+F1 Score: 0.8005
+Confusion Matrix:
+[[1046  173]
+ [ 124  596]]
