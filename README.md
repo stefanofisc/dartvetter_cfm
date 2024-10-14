@@ -20,6 +20,13 @@ In case of issues, try to set the conda environment by running the command below
 pip install -r requirements_v2.txt
 ```
 
+The last step consists in manually installing the following libraries:
+```bash
+pip install -e .
+pip install ForestDiffusion
+pip install torcheval
+```
+
 After installing the libraries, you can verify the installation by running the following command:
 ```bash
 pip list
