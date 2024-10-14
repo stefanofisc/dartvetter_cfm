@@ -15,6 +15,11 @@ Once the environment is activated, install the necessary libraries using the `re
 ```bash
 pip install -r requirements.txt
 ```
+In case of issues, try to set the conda environment by running the command below:
+```bash
+pip install -r requirements_v2.txt
+```
+
 After installing the libraries, you can verify the installation by running the following command:
 ```bash
 pip list
